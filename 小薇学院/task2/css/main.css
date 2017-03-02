@@ -1,0 +1,140 @@
+body {
+  background-color: #DCDCDC;
+  margin: 0px;
+}
+
+/*header*/
+header {
+  background-color: black;
+  height: 90px;
+  color: white;
+}
+
+.title {
+  display: inline-block;
+}
+
+nav {
+  display: inline-block;
+  float: right;
+  margin: 0px;
+  width:400px;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul li {
+  float: left; /*set float to left so all <li> elements can be displayed horizontally*/
+  padding-right: 20px;
+  height: 90px;
+  line-height: 90px; /*assign height and line-height with same value to vertically align text to the center*/
+}
+
+nav ul li a{
+  text-decoration: none; /*remove the underline*/
+  color: white;
+}
+
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+   color: grey;
+}
+
+/*content*/
+article, aside {
+  background-color: white;
+  margin: 20px;
+  box-shadow: 1px 2px 2px 1px grey;
+  padding: 20px 15px;
+}
+
+.content h3, .author, .time {
+  color: grey;
+}
+
+#second_article ul{
+  list-style-type: none; /*remove disc from the list elements*/
+}
+
+#pic dl dd {
+  border: 1px solid grey;
+  width: 150px;
+  height: 150px;
+}
+
+#pic  dl dd span {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  height: 20px;
+}
+
+#pic  dl dd img {
+  width: 130px;
+  height: 110px;
+  margin: 0px 10px 10px 10px;
+}
+
+#third_article table {
+  width: 100%;
+  border-collapse: collapse; /*Borders are collapsed into a single border*/
+}
+
+#third_article table caption {
+  text-align: left;
+}
+
+#third_article table th {
+  background-color: black;
+  color: white;
+}
+
+#buttom_row {
+  background-color: grey;
+}
+
+aside h4 {
+  border-left: 3px grey solid;
+  padding-left: 10px;
+}
+
+aside div {
+  margin: 10px 0px;
+}
+
+aside div .tip {
+    float:left;
+    text-align:right;
+    width:40%;
+    padding-right:10px;
+}
+
+aside div p {
+  margin-top: 5px;
+  margin-left: 40%;
+  padding-left: 10px;
+  color: grey;
+  font-size: 12px;
+}
+
+aside #submit_button {
+  width: 100%;
+  background-color: blue;
+  color: white;
+  height: 50px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+}

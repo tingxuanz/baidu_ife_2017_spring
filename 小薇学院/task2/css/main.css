@@ -19,6 +19,7 @@ nav {
   float: right;
   margin: 0px;
   width:400px;
+  padding-left: 30px; /*put the first disc in the box*/
 }
 
 nav ul {

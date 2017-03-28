@@ -76,7 +76,7 @@ function getData() {
 function sortAqiData(data) {
 
   data.sort(function(a, b) {
-    return a - b;
+    return a[1] - b[1];
   });
 
   return data; //返回排序后的数组
@@ -102,7 +102,7 @@ function render(data) {
 }
 
 function btnHandle() {
-  
+
   var resort = document.getElementById('resort');
   resort.innerHTML = ''; //每次点击时清空resort的内容，防止重复出现
   var aqiData = getData();

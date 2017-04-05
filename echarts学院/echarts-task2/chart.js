@@ -62,10 +62,8 @@ var option = {
             }
         },
         axisLabel: {
-          textStyle: {
-              color: 'black'
-          }
-        }
+          show: false
+        },
 
       },
       {
@@ -77,6 +75,11 @@ var option = {
           },
         axisLine: {
           onZero: false
+        },
+        axisLabel: {
+          textStyle: {
+            color: 'black'
+          }
         },
         data: countries
       }

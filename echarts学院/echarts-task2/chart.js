@@ -6,10 +6,29 @@ var population_2012 = [19325, 23438, 31000, 121594, 134141, 681807];
 
 // 指定图表的配置项和数据
 var option = {
-    title: {
+    backgroundColor: '#d7ebf4',
+    color: ['#1b647c', '#20b6e8'],
+    title: [
+      {
         text: '世界人口总量',
-        subtext: '数据来自网络'
-    },
+        subtext: 'ife 2017',
+        subtextStyle: {
+          color: 'black',
+          fontSize: 16
+        },
+        left: '5%'
+      },
+      {
+        subtext: '数据来自网络',
+        bottom: '2%',
+        subtextStyle: {
+          color: 'black',
+          fontSize: 16
+        },
+        left: '5%'
+      }
+    ],
+
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -17,26 +36,29 @@ var option = {
         }
     },
     legend: {
-        data: ['2011年', '2012年']
+        data: ['2011年', '2012年'],
+        left: '5%',
+        top: '10%'
     },
     grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
+        left: '5%',
+        right: '5%',
+        bottom: '5%',
+        top: '18%',
+        containLabel: true,
     },
-    xAxis: {
+
+    xAxis: [
+      {
         type: 'category',
         data: countries,
-        position: 'bottom',
-        boundaryGap: true,
         axisTick: {
             show: false,
         },
         axisLine: {
             lineStyle: {
                 color: 'red',
-                width: 3
+                width: 2
             }
         },
         axisLabel: {
@@ -44,7 +66,22 @@ var option = {
               color: 'black'
           }
         }
-    },
+
+      },
+      {
+        type: 'category',
+        position: 'bottom',
+        axisTick: {
+            inside: true,
+            alignWithLabel: true
+          },
+        axisLine: {
+          onZero: false
+        },
+        data: countries
+      }
+    ],
+
     yAxis: {
         type: 'value',
         boundaryGap: [0, 0.01],
@@ -58,7 +95,9 @@ var option = {
         },
         splitLine: {
             lineStyle: {
-                color: 'blue'
+                // color: ['red','white','white','white','white','white','white', 'transparent'],
+                color: 'white',
+                width: 3
             }
         }
     },
@@ -71,6 +110,7 @@ var option = {
         {
             name: '2012年',
             type: 'bar',
+            barGap: '0',
             data: population_2012
         }
     ]
